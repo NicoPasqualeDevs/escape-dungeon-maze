@@ -1,3 +1,4 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+/game-assets/0x72_DungeonTilesetII_v1.7
