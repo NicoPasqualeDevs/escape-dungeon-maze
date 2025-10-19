@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxklxvpn7yfh"]
+
+[ext_resource type="Script" path="res://scripts/world/main.gd" id="1_x4qpj"]
+[ext_resource type="Texture2D" path="res://game-assets/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f0.png" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://ct8vn7m3qw0xy" path="res://scenes/ui/inventory.tscn" id="3_inventory"]
+[ext_resource type="PackedScene" uid="uid://dh8vm2n5qw8yx" path="res://scenes/ui/stats_panel.tscn" id="4_stats"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x4qpj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15, 0.15, 0.2, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginLeft" type="Control" parent="VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "WORLD MAP"
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoLabel" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Select a location to enter"
+
+[node name="InventoryButton" type="Button" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Inventory"
+
+[node name="GenerateButton" type="Button" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Generate New World"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Main Menu"
+
+[node name="MarginRight" type="Control" parent="VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/CenterContainer"]
+layout_mode = 2
+columns = 8
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+z_index = 10
+texture = ExtResource("2_player")
+
+[node name="InventoryUI" parent="." instance=ExtResource("3_inventory")]
+visible = false
+
+[node name="StatsPanel" parent="." instance=ExtResource("4_stats")]
+visible = false
+
+[connection signal="pressed" from="VBoxContainer/TopBar/InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TopBar/GenerateButton" to="." method="_on_generate_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TopBar/MenuButton" to="." method="_on_menu_button_pressed"]
+

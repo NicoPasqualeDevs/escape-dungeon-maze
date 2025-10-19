@@ -1,0 +1,192 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct8vn7m3qw0xy"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory_ui.gd" id="1_inventory"]
+[ext_resource type="Texture2D" path="res://game-assets/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f0.png" id="2_knight"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_inventory")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -350.0
+offset_right = 600.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TopBar" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "CHARACTER & INVENTORY"
+
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "X"
+
+[node name="MainContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="EquipmentPanel" type="Panel" parent="Panel/MarginContainer/VBoxContainer/MainContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="EquipmentContainer" type="Control" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerImage" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+texture = ExtResource("2_knight")
+position = Vector2(200, 300)
+scale = Vector2(8, 8)
+
+[node name="HelmetSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 20.0
+offset_right = 232.0
+offset_bottom = 84.0
+
+[node name="NecklaceSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 90.0
+offset_right = 352.0
+offset_bottom = 154.0
+
+[node name="ChestSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 160.0
+offset_right = 232.0
+offset_bottom = 224.0
+
+[node name="BeltSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 230.0
+offset_right = 232.0
+offset_bottom = 294.0
+
+[node name="LegsSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 300.0
+offset_right = 232.0
+offset_bottom = 364.0
+
+[node name="BootsSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 440.0
+offset_right = 232.0
+offset_bottom = 504.0
+
+[node name="GlovesSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 230.0
+offset_right = 112.0
+offset_bottom = 294.0
+
+[node name="Ring1Slot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 90.0
+offset_right = 112.0
+offset_bottom = 154.0
+
+[node name="Ring2Slot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 230.0
+offset_right = 352.0
+offset_bottom = 294.0
+
+[node name="WeaponSlot" type="Button" parent="Panel/MarginContainer/VBoxContainer/MainContainer/EquipmentPanel/EquipmentContainer"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 370.0
+offset_right = 112.0
+offset_bottom = 434.0
+
+[node name="InventoryPanel" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/MainContainer/InventoryPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inventory"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer/MainContainer/InventoryPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer/MainContainer/InventoryPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 6
+
+[node name="ItemInfo" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ItemInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Empty Slot"
+
+[node name="DescriptionLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ItemInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = ""
+autowrap_mode = 3
+

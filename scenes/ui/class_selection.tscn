@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt5k3m8qw7yx"]
+
+[ext_resource type="Script" path="res://scripts/ui/class_selection.gd" id="1_class_select"]
+[ext_resource type="Texture2D" path="res://assets/characters/knight_m_idle_anim_f0.png" id="2_knight"]
+[ext_resource type="Texture2D" path="res://assets/characters/elf_m_idle_anim_f0.png" id="3_elf"]
+[ext_resource type="Texture2D" path="res://assets/characters/wizzard_m_idle_anim_f0.png" id="4_mage"]
+[ext_resource type="Texture2D" path="res://assets/characters/angel_idle_anim_f0.png" id="5_angel"]
+
+[node name="ClassSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_class_select")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "CHOOSE YOUR CLASS"
+horizontal_alignment = 1
+
+[node name="ClassesContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+
+[node name="KnightButton" type="Button" parent="Panel/VBoxContainer/ClassesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("2_knight")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+text = "KNIGHT
+
+Melee"
+
+[node name="ArcherButton" type="Button" parent="Panel/VBoxContainer/ClassesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("3_elf")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+text = "ARCHER
+
+Ranged"
+
+[node name="MageButton" type="Button" parent="Panel/VBoxContainer/ClassesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("4_mage")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+text = "MAGE
+
+Magic"
+
+[node name="AngelButton" type="Button" parent="Panel/VBoxContainer/ClassesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("5_angel")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+text = "ANGEL
+
+Support"
+
+[node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Hover over a class to see details"
+horizontal_alignment = 1
+vertical_alignment = 1
+

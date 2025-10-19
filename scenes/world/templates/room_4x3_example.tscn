@@ -1,0 +1,147 @@
+[gd_scene load_steps=15 format=3 uid="uid://ctuilvs4367j3"]
+
+[ext_resource type="Script" uid="uid://c5b2ym3ym27ov" path="res://scripts/world/room.gd" id="1_c2eok"]
+[ext_resource type="Texture2D" uid="uid://17ff2w7xtrnv" path="res://assets/tiles/floor_1.png" id="2_usmbq"]
+[ext_resource type="Texture2D" uid="uid://bew0em8rg8hs2" path="res://assets/tiles/wall_edge_bottom_left.png" id="3_ektur"]
+[ext_resource type="Texture2D" uid="uid://bb56tiesadi12" path="res://assets/tiles/wall_edge_bottom_right.png" id="4_jd5si"]
+[ext_resource type="Texture2D" uid="uid://feosqmmjukl6" path="res://assets/tiles/wall_edge_tshape_left.png" id="5_hkdtx"]
+[ext_resource type="Texture2D" uid="uid://dje1ixwgbsm" path="res://assets/tiles/wall_edge_tshape_right.png" id="6_658ne"]
+[ext_resource type="Texture2D" uid="uid://bujke4t4o1nwa" path="res://assets/tiles/wall_right.png" id="7_w8f0m"]
+[ext_resource type="Texture2D" uid="uid://bsn3nevbb0ny8" path="res://assets/tiles/wall_left.png" id="8_jyvsa"]
+[ext_resource type="Texture2D" uid="uid://bt7v8607xrye0" path="res://assets/tiles/wall_mid.png" id="9_7gcos"]
+[ext_resource type="Texture2D" uid="uid://g71ctstcigan" path="res://assets/tiles/wall_edge_top_left.png" id="10_wo7ws"]
+[ext_resource type="Texture2D" uid="uid://dme0hmufay8bq" path="res://assets/tiles/wall_edge_top_right.png" id="11_5to44"]
+[ext_resource type="Texture2D" uid="uid://bkjonewj5i5xl" path="res://assets/tiles/wall_top_mid.png" id="12_u4e6o"]
+[ext_resource type="Texture2D" uid="uid://dkmf0od3q8q5v" path="res://assets/tiles/wall_edge_mid_left.png" id="13_xp8vf"]
+[ext_resource type="Texture2D" uid="uid://bft5rj4lglxw1" path="res://assets/tiles/wall_edge_mid_right.png" id="14_35it6"]
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_c2eok")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -301.0
+offset_top = -448.0
+offset_right = 2199.0
+offset_bottom = 1552.0
+color = Color(0.1, 0.1, 0.12, 1)
+
+[node name="Floor1" type="Sprite2D" parent="."]
+position = Vector2(512, 268)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor2" type="Sprite2D" parent="."]
+position = Vector2(512, 284)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor3" type="Sprite2D" parent="."]
+position = Vector2(512, 300)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor4" type="Sprite2D" parent="."]
+position = Vector2(512, 316)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor5" type="Sprite2D" parent="."]
+position = Vector2(528, 268)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor6" type="Sprite2D" parent="."]
+position = Vector2(528, 284)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor7" type="Sprite2D" parent="."]
+position = Vector2(528, 300)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor8" type="Sprite2D" parent="."]
+position = Vector2(528, 316)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor9" type="Sprite2D" parent="."]
+position = Vector2(544, 268)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor10" type="Sprite2D" parent="."]
+position = Vector2(544, 284)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor11" type="Sprite2D" parent="."]
+position = Vector2(544, 300)
+texture = ExtResource("2_usmbq")
+
+[node name="Floor12" type="Sprite2D" parent="."]
+position = Vector2(544, 316)
+texture = ExtResource("2_usmbq")
+
+[node name="WallEdgeBottomLeft" type="Sprite2D" parent="."]
+position = Vector2(512, 316)
+texture = ExtResource("3_ektur")
+
+[node name="WallEdgeBottomRight" type="Sprite2D" parent="."]
+position = Vector2(544, 316)
+texture = ExtResource("4_jd5si")
+
+[node name="WallEdgeTshapeLeft" type="Sprite2D" parent="."]
+position = Vector2(512, 252)
+texture = ExtResource("5_hkdtx")
+
+[node name="WallEdgeTshapeRight" type="Sprite2D" parent="."]
+position = Vector2(544, 252)
+texture = ExtResource("6_658ne")
+
+[node name="WallRight" type="Sprite2D" parent="."]
+position = Vector2(544, 332)
+texture = ExtResource("7_w8f0m")
+
+[node name="WallLeft" type="Sprite2D" parent="."]
+position = Vector2(512, 332)
+texture = ExtResource("8_jyvsa")
+
+[node name="WallMid" type="Sprite2D" parent="."]
+position = Vector2(528, 252)
+texture = ExtResource("9_7gcos")
+
+[node name="WallMid2" type="Sprite2D" parent="."]
+position = Vector2(528, 332)
+texture = ExtResource("9_7gcos")
+
+[node name="WallEdgeTopLeft" type="Sprite2D" parent="."]
+position = Vector2(512, 236)
+texture = ExtResource("10_wo7ws")
+
+[node name="WallEdgeTopRight" type="Sprite2D" parent="."]
+position = Vector2(544, 236)
+texture = ExtResource("11_5to44")
+
+[node name="WallTopMid" type="Sprite2D" parent="."]
+position = Vector2(528, 236)
+texture = ExtResource("12_u4e6o")
+
+[node name="WallTopMid2" type="Sprite2D" parent="."]
+position = Vector2(528, 316)
+texture = ExtResource("12_u4e6o")
+
+[node name="WallEdgeMidLeft" type="Sprite2D" parent="."]
+position = Vector2(512, 268)
+texture = ExtResource("13_xp8vf")
+
+[node name="WallEdgeMidLeft2" type="Sprite2D" parent="."]
+position = Vector2(512, 284)
+texture = ExtResource("13_xp8vf")
+
+[node name="WallEdgeMidLeft3" type="Sprite2D" parent="."]
+position = Vector2(512, 300)
+texture = ExtResource("13_xp8vf")
+
+[node name="WallEdgeMidRight" type="Sprite2D" parent="."]
+position = Vector2(544, 268)
+texture = ExtResource("14_35it6")
+
+[node name="WallEdgeMidRight2" type="Sprite2D" parent="."]
+position = Vector2(544, 284)
+texture = ExtResource("14_35it6")
+
+[node name="WallEdgeMidRight3" type="Sprite2D" parent="."]
+position = Vector2(544, 300)
+texture = ExtResource("14_35it6")

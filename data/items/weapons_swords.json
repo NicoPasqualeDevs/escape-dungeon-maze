@@ -1,0 +1,59 @@
+{
+  "weapons": [
+    {
+      "id": "iron_sword_common",
+      "name": "Iron Sword",
+      "description": "Standard iron sword. +2 Brutality\nDamage: 25 | Speed: 0.8 | Range: 150",
+      "icon": "res://assets/weapons/weapon_knight_sword.png",
+      "type": "weapon",
+      "slot": "WEAPON",
+      "attributes": {
+        "brutality": 2
+      },
+      "weapon_stats": {
+        "damage": 25.0,
+        "attack_speed": 0.8,
+        "range": 150.0,
+        "weapon_type": "MELEE"
+      },
+      "rarity": "COMMON"
+    },
+    {
+      "id": "iron_sword_uncommon",
+      "name": "Iron Sword",
+      "description": "Quality iron sword. +3 Brutality\nDamage: 35 | Speed: 0.85 | Range: 155",
+      "icon": "res://assets/weapons/weapon_anime_sword.png",
+      "type": "weapon",
+      "slot": "WEAPON",
+      "attributes": {
+        "brutality": 3
+      },
+      "weapon_stats": {
+        "damage": 35.0,
+        "attack_speed": 0.85,
+        "range": 155.0,
+        "weapon_type": "MELEE"
+      },
+      "rarity": "UNCOMMON"
+    },
+    {
+      "id": "iron_sword_rare",
+      "name": "Iron Sword",
+      "description": "Masterwork iron sword. +5 Brutality\nDamage: 55 | Speed: 0.9 | Range: 160",
+      "icon": "res://assets/weapons/weapon_golden_sword.png",
+      "type": "weapon",
+      "slot": "WEAPON",
+      "attributes": {
+        "brutality": 5
+      },
+      "weapon_stats": {
+        "damage": 55.0,
+        "attack_speed": 0.9,
+        "range": 160.0,
+        "weapon_type": "MELEE"
+      },
+      "rarity": "RARE"
+    }
+  ]
+}
+

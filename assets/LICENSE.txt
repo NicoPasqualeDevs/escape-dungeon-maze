@@ -1,0 +1,23 @@
+ASSET LICENSES
+===============
+
+DungeonTileset II by 0x72
+--------------------------
+Author: Robert (0x72)
+Source: https://0x72.itch.io/dungeontileset-ii
+License: CC0 1.0 Universal (Public Domain)
+
+You can copy, modify, distribute and perform the work, even for commercial
+purposes, all without asking permission.
+
+Files included:
+- All sprites in assets/tiles/
+- All sprites in assets/characters/
+- All sprites in assets/enemies/
+- All sprites in assets/objects/
+
+Original pack location: C:\Users\TATA\Documents\test-tati\game-assets\0x72_DungeonTilesetII_v1.7
+
+For more information about CC0 license:
+https://creativecommons.org/publicdomain/zero/1.0/
+
