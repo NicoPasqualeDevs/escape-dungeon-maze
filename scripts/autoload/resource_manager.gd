@@ -47,5 +47,6 @@ func get_health_bar_style(health_percent: float) -> StyleBoxFlat:
 	else:
 		color = GameConstants.COLORS.health_low
 	
-	return get_stylebox_flat(color)
+	# Añadir un borde sutil para mejor visibilidad
+	return get_stylebox_flat(color, 1, Color(0.2, 0.2, 0.2))
 

@@ -14,6 +14,9 @@ var idle_position: Vector2
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var movement_component: MovementComponent = $MovementComponent
 
+
+
+
 func _ready():
 	add_to_group("enemy")
 	idle_position = global_position
@@ -31,6 +34,8 @@ func _ready():
 	
 	detection_range = GameConstants.ENEMY.detection_range
 	chase_range = GameConstants.ENEMY.chase_range
+	
+
 
 func _setup_stats():
 	if is_boss:
@@ -61,6 +66,11 @@ func _physics_process(delta):
 			_return_to_idle()
 	
 	move_and_slide()
+	
+	# Voltear sprite según la dirección del movimiento
+	var sprite = get_node_or_null("Sprite2D")
+	if sprite and velocity.x != 0:
+		sprite.flip_h = velocity.x < 0
 	
 	if attack_cooldown > 0:
 		attack_cooldown -= delta

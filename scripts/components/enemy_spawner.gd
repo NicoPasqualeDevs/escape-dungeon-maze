@@ -14,17 +14,20 @@ static func spawn_enemy(position: Vector2, parent: Node, player: Node, is_boss: 
 	movement_comp.name = "MovementComponent"
 	enemy.add_child(movement_comp)
 	
-	var sprite_size = Vector2(16, 16)
 	var collision_size = Vector2(14, 14)
 	
 	if is_boss:
-		sprite_size = Vector2(32, 32)
 		collision_size = Vector2(28, 28)
 	
-	var sprite = ColorRect.new()
-	sprite.size = sprite_size
-	sprite.position = -sprite_size / 2
-	sprite.color = Color(0.6, 0.1, 0.1) if is_boss else Color(0.8, 0.2, 0.2)
+	# Crear Sprite2D con textura básica de goblin
+	var sprite = Sprite2D.new()
+	sprite.texture = load("res://assets/enemies/goblin_idle_anim_f0.png")
+	sprite.name = "Sprite2D"
+	
+	# Configurar escala para boss
+	if is_boss:
+		sprite.scale = Vector2(2.0, 2.0)
+	
 	enemy.add_child(sprite)
 	
 	var collision = CollisionShape2D.new()
@@ -63,6 +66,8 @@ static func spawn_enemies_in_pattern(count: int, parent: Node, player: Node, pat
 				enemies.append(spawn_enemy(pos, parent, player))
 	
 	return enemies
+
+
 
 static func spawn_default_enemies(parent: Node, player: Node, room_bounds: Rect2 = Rect2(220, 120, 360, 260)) -> Array:
 	var enemies = []

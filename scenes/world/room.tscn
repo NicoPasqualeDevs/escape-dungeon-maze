@@ -86,7 +86,8 @@ shape = SubResource("CircleShape2D_detection")
 [node name="AttackAnimation" type="Node2D" parent="Player"]
 
 [node name="ExitArea" type="Area2D" parent="."]
-position = Vector2(400, 120)
+z_index = 1
+position = Vector2(580, 120)
 
 [node name="ExitSprite" type="ColorRect" parent="ExitArea"]
 offset_left = -12.0
